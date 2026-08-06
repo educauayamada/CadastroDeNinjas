@@ -16,12 +16,16 @@ public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String nome;
+
+    @Column(unique = true)
     private String email;
+
     private int idade;
 
     @ManyToOne
-    @JoinColumn(name = "missoes_id")
+    @JoinColumn(name = "missoes_id") // Foreing Key
     private MissoesModel missoes;
 
 }
