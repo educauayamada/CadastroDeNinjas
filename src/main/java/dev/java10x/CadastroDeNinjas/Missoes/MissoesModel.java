@@ -19,8 +19,10 @@ public class MissoesModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "nome")
     private String nomeMissao;
 
+    @Column(name = "dificuldade")
     private String dificuldade;
 
     @OneToMany(mappedBy = "missoes")
